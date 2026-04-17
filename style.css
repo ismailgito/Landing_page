@@ -250,7 +250,7 @@ body {
     padding: 0.5rem 1rem;
     /* Added padding so the content doesn't hit the edges */
     list-style: none;
-    background: #16213e;
+    background-color: #16213e;
     border-radius: 8px;
     /* This creates the "little bit curve" effect */
 }
