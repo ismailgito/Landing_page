@@ -8,6 +8,7 @@
 }
 
 :root {
+
     --color-primary-light: #16213e;
     --color-accent: #c9a84c;
     --color-accent-hover: #b8953f;
@@ -244,10 +245,14 @@ body {
 .nav__list {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 1rem;
+    /* Increased gap for better readability */
+    padding: 0.5rem 1rem;
+    /* Added padding so the content doesn't hit the edges */
     list-style: none;
     background: #16213e;
-    ;
+    border-radius: 8px;
+    /* This creates the "little bit curve" effect */
 }
 
 .nav__link {
