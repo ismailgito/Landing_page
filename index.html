@@ -88,7 +88,7 @@ Tool does not exists.Tool does not exists.
         <!-- Hero Section -->
         <section id="home" class="hero" aria-labelledby="hero-title">
             <div class="hero__bg">
-                <img src="https://image.qwenlm.ai/public_source/626d5f16-47d5-45dc-9cb4-6f06dae0df0c/1145ebad1-5b2c-4007-9ca6-da7ef456a8c1.png"
+                <img src="images/webp_1.webp"
                     alt="Modern luxury home with large windows and beautiful landscaping at sunset" width="1920"
                     height="1080" loading="eager" fetchpriority="high" decoding="async">
             </div>
@@ -281,7 +281,7 @@ Tool does not exists.Tool does not exists.
                     <!-- Property 1 -->
                     <article class="property-card reveal">
                         <div class="property-card__image">
-                            <img src="https://image.qwenlm.ai/public_source/626d5f16-47d5-45dc-9cb4-6f06dae0df0c/1494a7c31-368e-4cdb-99f3-f1641dec4abb.png"
+                            <img src="images/House_no2.webp"
                                 alt="Modern living room interior with large windows, gray sectional sofa, marble floors, and abstract blue wall art"
                                 width="600" height="400" loading="lazy" decoding="async">
                             <span class="property-card__badge">Featured</span>
@@ -331,7 +331,7 @@ Tool does not exists.Tool does not exists.
                     <!-- Property 2 -->
                     <article class="property-card reveal">
                         <div class="property-card__image">
-                            <img src="https://image.qwenlm.ai/public_source/626d5f16-47d5-45dc-9cb4-6f06dae0df0c/16fbe0e0a-d7c6-4512-bf68-844c85e61c24.png"
+                            <img src="images/House_no3.webp"
                                 alt="Beautiful white family home with white picket fence, green lawn, and pink hydrangea flowers"
                                 width="600" height="400" loading="lazy" decoding="async">
                             <span class="property-card__badge">New Listing</span>
@@ -381,7 +381,7 @@ Tool does not exists.Tool does not exists.
                     <!-- Property 3 -->
                     <article class="property-card reveal">
                         <div class="property-card__image">
-                            <img src="https://image.qwenlm.ai/public_source/626d5f16-47d5-45dc-9cb4-6f06dae0df0c/168e01b3b-a981-4356-994a-55f701b24c4f.png"
+                            <img src="images/House_no4.webp"
                                 alt="Luxury penthouse living room with city skyline view at night through floor-to-ceiling windows"
                                 width="600" height="400" loading="lazy" decoding="async">
                             <span class="property-card__badge">Premium</span>
@@ -954,18 +954,28 @@ Tool does not exists.Tool does not exists.
 
         })();
     </script>
-    <!-- Google Tag Manager -->
+
     <script>
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })
-            (window, document, 'script', 'dataLayer', 'GTM-KBCQ4L7X');</script>
-    <!-- End Google Tag Manager -->
+        const loadGTM = () => {
+            if (window.gtmLoaded) return;
+            window.gtmLoaded = true;
+
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-KBCQ4L7X'); // Replace with your ID
+        };
+
+        // Trigger GTM on user activity
+        ['mouseover', 'keydown', 'touchmove', 'touchstart', 'scroll'].forEach(event => {
+            window.addEventListener(event, loadGTM, { once: true, passive: true });
+        });
+    </script>
+
 </body>
 
 </html>
