@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // 🔹 2. CTA Click Tracking
-    const ctaBtn = document.getElementById('cta-primary');
+    const ctaBtn = document.querySelector('a[href="#properties"].btn--primary.btn--lg') || document.getElementById('cta-primary');
     if (ctaBtn) {
         ctaBtn.addEventListener('click', () => {
             trackGAEvent('click_cta', {
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 🔹 3. Form Submission Tracking
-    const leadForm = document.getElementById('lead-form');
+    const leadForm = document.getElementById('contact-form') || document.getElementById('lead-form');
     if (leadForm) {
         leadForm.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -51,9 +51,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Simulate API call / success state
             leadForm.reset();
-            ctaBtn?.textContent || (leadForm.querySelector('button').textContent = '✅ Subscribed!');
+            const submitBtn = leadForm.querySelector('button');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = '✅ Subscribed!';
+
             setTimeout(() => {
-                leadForm.querySelector('button').textContent = 'Join Now';
+                submitBtn.textContent = originalText;
             }, 2000);
         });
     }
