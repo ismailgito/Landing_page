@@ -247,6 +247,8 @@ body {
     align-items: center;
     gap: 4px;
     list-style: none;
+    background: #16213e;
+    ;
 }
 
 .nav__link {
