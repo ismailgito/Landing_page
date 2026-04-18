@@ -17,15 +17,6 @@ Tool does not exists.Tool does not exists.
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-    <!-- 1. Preload LCP image FIRST -->
-    <link rel="preload" as="image" href="hero.webp" fetchpriority="high">
-
-    <!-- 2. Preload CSS -->
-    <link rel="preload" as="style" href="style.css" onload="this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="style.css">
-    </noscript>
-
     <!-- 3. Font preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1401,9 +1392,8 @@ Tool does not exists.Tool does not exists.
         <!-- Hero Section -->
         <section id="home" class="hero" aria-labelledby="hero-title">
             <div class="hero__bg">
-                <img src="images/More compress version _ 1.webp"
-                    alt="Modern luxury home with large windows and beautiful landscaping at sunset" width="1920"
-                    height="1080" loading="eager" fetchpriority="high" decoding="async">
+                <link rel="preload" as="image" href="images/More compress version _ 1.webp" fetchpriority="high">
+                </head>
             </div>
             <div class="hero__overlay" aria-hidden="true"></div>
             <div class="hero__content">
@@ -1594,9 +1584,12 @@ Tool does not exists.Tool does not exists.
                     <!-- Property 1 -->
                     <article class="property-card reveal">
                         <div class="property-card__image">
-                            <img src="images/More compress version _ 2.webp"
-                                alt="Modern living room interior with large windows, gray sectional sofa, marble floors, and abstract blue wall art"
-                                width="600" height="400" loading="lazy" decoding="async">
+
+                            <body>
+                                <img src="images/More compress version _ 2.webp"
+                                    alt="Luxury penthouse living room with city skyline" width="600" height="400"
+                                    fetchpriority="high" decoding="sync">
+                            </body>
                             <span class="property-card__badge">Featured</span>
                             <button class="property-card__favorite" aria-label="Add to favorites" aria-pressed="false"
                                 data-favorite>
@@ -1644,9 +1637,12 @@ Tool does not exists.Tool does not exists.
                     <!-- Property 2 -->
                     <article class="property-card reveal">
                         <div class="property-card__image">
-                            <img src="images/More compress version _ 3.webp"
-                                alt="Beautiful white family home with white picket fence, green lawn, and pink hydrangea flowers"
-                                width="600" height="400" loading="lazy" decoding="async">
+
+                            <body>
+                                <img src="images/More compress version _ 3.webp"
+                                    alt="Luxury penthouse living room with city skyline" width="600" height="400"
+                                    fetchpriority="high" decoding="sync">
+                            </body>
                             <span class="property-card__badge">New Listing</span>
                             <button class="property-card__favorite" aria-label="Add to favorites" aria-pressed="false"
                                 data-favorite>
@@ -1694,9 +1690,12 @@ Tool does not exists.Tool does not exists.
                     <!-- Property 3 -->
                     <article class="property-card reveal">
                         <div class="property-card__image">
-                            <img src="images/More compress version _ 4.webp"
-                                alt="Luxury penthouse living room with city skyline view at night through floor-to-ceiling windows"
-                                width="600" height="400" loading="lazy" decoding="async">
+
+                            <body>
+                                <img src="images/More compress version _ 4.webp"
+                                    alt="Luxury penthouse living room with city skyline" width="600" height="400"
+                                    fetchpriority="high" decoding="sync">
+                            </body>
                             <span class="property-card__badge">Premium</span>
                             <button class="property-card__favorite" aria-label="Add to favorites" aria-pressed="false"
                                 data-favorite>
