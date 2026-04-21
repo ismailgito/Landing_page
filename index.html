@@ -2,16 +2,12 @@
 <html lang="en" dir="ltr">
 
 <head>
+
     <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-KBCQ4L7X');</script>
+    <script>let gtmLoaded = !1; function loadGTM() { gtmLoaded || (gtmLoaded = !0, function (e, t, o, a) { e[a] = e[a] || [], e[a].push({ "gtm.start": (new Date).getTime(), event: "gtm.js" }); var n = t.getElementsByTagName(o)[0], d = t.createElement(o); d.async = !0, d.src = "https://www.googletagmanager.com/gtm.js?id=GTM-KBCQ4L7X", n.parentNode.insertBefore(d, n) }(window, document, "script", "dataLayer")) } ["mouseover", "keydown", "touchmove", "touchstart", "scroll"].forEach(e => { window.addEventListener(e, loadGTM, { passive: !0, once: !0 }) });
+    </script>
     <!-- End Google Tag Manager -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
@@ -218,7 +214,7 @@
             justify-content: center;
             gap: 8px;
             padding: 14px 32px;
-            border: 2px solid transparent;
+            border: 2px solid #fff0;
             border-radius: var(--radius-sm);
             font-size: 1rem;
             cursor: pointer;
@@ -238,7 +234,7 @@
 
         .btn--outline,
         .menu-toggle[aria-expanded=true] .menu-toggle__icon {
-            background-color: transparent
+            background-color: #fff0
         }
 
         .btn--dark,
@@ -290,7 +286,7 @@
             left: 0;
             right: 0;
             height: var(--header-height);
-            background-color: rgba(26, 26, 46, .95);
+            background-color: rgb(26 26 46 / .95);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             z-index: 1000
@@ -317,7 +313,7 @@
         .nav__list {
             display: flex;
             align-items: center;
-            background-color: #16213e;
+            background-color: #16213e
         }
 
         .logo__icon {
@@ -349,7 +345,7 @@
         .nav__link {
             display: block;
             padding: 8px 18px;
-            color: rgba(255, 255, 255, .8);
+            color: rgb(255 255 255 / .8);
             font-size: .925rem;
             font-weight: 500;
             border-radius: var(--radius-sm);
@@ -365,7 +361,7 @@
         .nav__link:focus-visible,
         .nav__link:hover {
             color: var(--color-white);
-            background-color: rgba(255, 255, 255, .1)
+            background-color: rgb(255 255 255 / .1)
         }
 
         .nav__link[aria-current=page] {
@@ -454,7 +450,7 @@
         }
 
         .hero__overlay {
-            background: linear-gradient(135deg, rgba(26, 26, 46, .85) 0, rgba(22, 33, 62, .65) 50%, rgba(26, 26, 46, .75) 100%);
+            background: linear-gradient(135deg, rgb(26 26 46 / .85) 0, rgb(22 33 62 / .65) 50%, rgb(26 26 46 / .75) 100%);
             z-index: 2
         }
 
@@ -479,8 +475,8 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background-color: rgba(201, 168, 76, .15);
-            border: 1px solid rgba(201, 168, 76, .3);
+            background-color: rgb(201 168 76 / .15);
+            border: 1px solid rgb(201 168 76 / .3);
             padding: 8px 16px;
             border-radius: 50px;
             font-size: .85rem;
@@ -528,7 +524,7 @@
         .hero__subtitle {
             font-size: 1.15rem;
             line-height: 1.7;
-            color: rgba(255, 255, 255, .75);
+            color: rgb(255 255 255 / .75);
             margin-bottom: 36px;
             max-width: 520px
         }
@@ -544,7 +540,7 @@
             gap: 40px;
             margin-top: 50px;
             padding-top: 32px;
-            border-top: 1px solid rgba(255, 255, 255, .1)
+            border-top: 1px solid rgb(255 255 255 / .1)
         }
 
         .hero__stat-number {
@@ -555,7 +551,7 @@
 
         .hero__stat-label {
             font-size: .85rem;
-            color: rgba(255, 255, 255, .6);
+            color: rgb(255 255 255 / .6);
             margin-top: 4px
         }
 
@@ -647,7 +643,7 @@
         .search__select:focus {
             border-color: var(--color-accent);
             outline: 0;
-            box-shadow: 0 0 0 3px rgba(201, 168, 76, .15)
+            box-shadow: 0 0 0 3px rgb(201 168 76 / .15)
         }
 
         .feature-card:hover,
@@ -734,7 +730,7 @@
         }
 
         .section--dark .section__subtitle {
-            color: rgba(255, 255, 255, .6)
+            color: rgb(255 255 255 / .6)
         }
 
         .features__grid,
@@ -755,14 +751,14 @@
         }
 
         .feature-card:hover {
-            border-color: transparent
+            border-color: #fff0
         }
 
         .feature-card__icon {
             width: 64px;
             height: 64px;
             margin: 0 auto 24px;
-            background-color: rgba(201, 168, 76, .1);
+            background-color: rgb(201 168 76 / .1);
             border-radius: var(--radius-md);
             display: flex;
             align-items: center;
@@ -836,7 +832,7 @@
             right: 16px;
             width: 40px;
             height: 40px;
-            background-color: rgba(255, 255, 255, .9);
+            background-color: rgb(255 255 255 / .9);
             border: none;
             border-radius: 50%;
             display: flex;
@@ -930,15 +926,15 @@
         }
 
         .testimonial-card {
-            background-color: rgba(255, 255, 255, .05);
-            border: 1px solid rgba(255, 255, 255, .1);
+            background-color: rgb(255 255 255 / .05);
+            border: 1px solid rgb(255 255 255 / .1);
             border-radius: var(--radius-lg);
             padding: 36px;
             transition: all var(--transition-base)
         }
 
         .testimonial-card:hover {
-            background-color: rgba(255, 255, 255, .08);
+            background-color: rgb(255 255 255 / .08);
             transform: translateY(-4px)
         }
 
@@ -957,7 +953,7 @@
         .testimonial-card__text {
             font-size: 1rem;
             line-height: 1.8;
-            color: rgba(255, 255, 255, .8);
+            color: rgb(255 255 255 / .8);
             margin-bottom: 24px;
             font-style: italic
         }
@@ -996,7 +992,7 @@
 
         .testimonial-card__role {
             font-size: .8rem;
-            color: rgba(255, 255, 255, .5);
+            color: rgb(255 255 255 / .5);
             margin-top: 2px
         }
 
@@ -1012,7 +1008,7 @@
             right: -20%;
             width: 600px;
             height: 600px;
-            background: radial-gradient(circle, rgba(201, 168, 76, .1) 0, transparent 70%);
+            background: radial-gradient(circle, rgb(201 168 76 / .1) 0, transparent 70%);
             border-radius: 50%
         }
 
@@ -1037,7 +1033,7 @@
 
         .cta__desc {
             font-size: 1.1rem;
-            color: rgba(255, 255, 255, .7);
+            color: rgb(255 255 255 / .7);
             line-height: 1.7;
             margin-bottom: 32px
         }
@@ -1085,7 +1081,7 @@
         .form__input:focus {
             border-color: var(--color-accent);
             outline: 0;
-            box-shadow: 0 0 0 3px rgba(201, 168, 76, .15)
+            box-shadow: 0 0 0 3px rgb(201 168 76 / .15)
         }
 
         .form__input--error {
@@ -1113,7 +1109,7 @@
 
         .footer {
             background-color: var(--color-gray-900);
-            color: rgba(255, 255, 255, .7);
+            color: rgb(255 255 255 / .7);
             padding: 80px 0 0
         }
 
@@ -1122,14 +1118,14 @@
             grid-template-columns: 2fr 1fr 1fr 1fr;
             gap: 48px;
             padding-bottom: 60px;
-            border-bottom: 1px solid rgba(255, 255, 255, .1)
+            border-bottom: 1px solid rgb(255 255 255 / .1)
         }
 
         .footer__brand-desc {
             font-size: .95rem;
             line-height: 1.7;
             margin: 16px 0 24px;
-            color: rgba(255, 255, 255, .5)
+            color: rgb(255 255 255 / .5)
         }
 
         .footer__social {
@@ -1141,11 +1137,11 @@
             width: 40px;
             height: 40px;
             border-radius: var(--radius-sm);
-            background-color: rgba(255, 255, 255, .08);
+            background-color: rgb(255 255 255 / .08);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: rgba(255, 255, 255, .6);
+            color: rgb(255 255 255 / .6);
             text-decoration: none;
             transition: all var(--transition-fast)
         }
@@ -1174,7 +1170,7 @@
         }
 
         .footer__list a {
-            color: rgba(255, 255, 255, .5);
+            color: rgb(255 255 255 / .5);
             font-size: .9rem
         }
 
@@ -1189,7 +1185,7 @@
             justify-content: space-between;
             padding: 24px 0;
             font-size: .85rem;
-            color: rgba(255, 255, 255, .35)
+            color: rgb(255 255 255 / .35)
         }
 
         .footer__bottom-links {
@@ -1198,7 +1194,7 @@
         }
 
         .footer__bottom-links a {
-            color: rgba(255, 255, 255, .35)
+            color: rgb(255 255 255 / .35)
         }
 
         .reveal {
@@ -1273,7 +1269,7 @@
             .nav__list {
                 flex-direction: column;
                 gap: 4px;
-                background-color: #16213e;
+                background-color: #16213e
             }
 
             .nav__link {
@@ -2032,39 +2028,7 @@
 
     <!-- ===== JAVASCRIPT ===== -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            window.dataLayer = window.dataLayer || [];
-
-            // UTM Capture on Load
-            const p = new URLSearchParams(window.location.search);
-            window.dataLayer.push({
-                event: 'utm_loaded',
-                utm_source: p.get('utm_source') || 'direct',
-                utm_medium: p.get('utm_medium') || 'none',
-                utm_campaign: p.get('utm_campaign') || 'organic'
-            });
-
-            // CTA Click
-            document.getElementById('cta-primary')?.addEventListener('click', () => {
-                window.dataLayer.push({ event: 'click_cta', category: 'engagement' });
-            });
-
-            // Form Submit
-            document.getElementById('lead-form')?.addEventListener('submit', (e) => {
-                e.preventDefault();
-                window.dataLayer.push({ event: 'generate_lead', category: 'conversion' });
-                // Add your form submission logic here
-            });
-
-            // Scroll Depth 50%
-            let s50 = false;
-            window.addEventListener('scroll', () => {
-                if (!s50 && window.scrollY > document.body.scrollHeight * 0.5) {
-                    window.dataLayer.push({ event: 'scroll_50', category: 'engagement' });
-                    s50 = true;
-                }
-            }, { passive: true });
-        });
+        document.addEventListener("DOMContentLoaded", () => { window.dataLayer = window.dataLayer || []; const e = new URLSearchParams(window.location.search); window.dataLayer.push({ event: "utm_loaded", utm_source: e.get("utm_source") || "direct", utm_medium: e.get("utm_medium") || "none", utm_campaign: e.get("utm_campaign") || "organic" }), document.getElementById("cta-primary")?.addEventListener("click", () => { window.dataLayer.push({ event: "click_cta", category: "engagement" }) }), document.getElementById("lead-form")?.addEventListener("submit", e => { e.preventDefault(), window.dataLayer.push({ event: "generate_lead", category: "conversion" }) }); let t = !1; window.addEventListener("scroll", () => { !t && window.scrollY > .5 * document.body.scrollHeight && (window.dataLayer.push({ event: "scroll_50", category: "engagement" }), t = !0) }, { passive: !0 }) });
     </script>
 </body>
 
