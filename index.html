@@ -3,20 +3,14 @@
 
 <head>
     <!-- Google Tag Manager -->
-    <script>
-        window.addEventListener('load', function () {
-            setTimeout(function () {
-                (function (w, d, s, l, i) {
-                    w[l] = w[l] || []; w[l].push({
-                        'gtm.start':
-                            new Date().getTime(), event: 'gtm.js'
-                    }); var f = d.getElementsByTagName(s)[0],
-                        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-                })(window, document, 'script', 'dataLayer', 'GTM-KBCQ4L7X');
-            }, 2000); // Wait 2 seconds after page load
-        });
-    </script>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KBCQ4L7X');</script>
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -2037,7 +2031,41 @@
     </footer>
 
     <!-- ===== JAVASCRIPT ===== -->
-    <script src="script.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            window.dataLayer = window.dataLayer || [];
+
+            // UTM Capture on Load
+            const p = new URLSearchParams(window.location.search);
+            window.dataLayer.push({
+                event: 'utm_loaded',
+                utm_source: p.get('utm_source') || 'direct',
+                utm_medium: p.get('utm_medium') || 'none',
+                utm_campaign: p.get('utm_campaign') || 'organic'
+            });
+
+            // CTA Click
+            document.getElementById('cta-primary')?.addEventListener('click', () => {
+                window.dataLayer.push({ event: 'click_cta', category: 'engagement' });
+            });
+
+            // Form Submit
+            document.getElementById('lead-form')?.addEventListener('submit', (e) => {
+                e.preventDefault();
+                window.dataLayer.push({ event: 'generate_lead', category: 'conversion' });
+                // Add your form submission logic here
+            });
+
+            // Scroll Depth 50%
+            let s50 = false;
+            window.addEventListener('scroll', () => {
+                if (!s50 && window.scrollY > document.body.scrollHeight * 0.5) {
+                    window.dataLayer.push({ event: 'scroll_50', category: 'engagement' });
+                    s50 = true;
+                }
+            }, { passive: true });
+        });
+    </script>
 </body>
 
 </html>
